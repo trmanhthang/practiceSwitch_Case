@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <!-- BÀI 1 -->
+    <div>
+        <h2>Bài 1. Enter browser name</h2>
+        <input type="text" id="name">
+        <input type="button" value="OK" onclick="ok()">
+    </div>
+
+    <!-- BÀI 2 -->
+    <div>
+        <h2>Bài 2</h2>
+        <input type="text" id="number">
+        <input type="button" value="Check" onclick="check()">
+    </div>
+
+    <!-- BÀi 3 -->
+    <div>
+        <h2>Bài 3. Kiểm tra số âm/dương</h2>
+        <input type="text" id="num">
+        <input type="button" value="Check" onclick="outPut()">
+    </div>
+</body>
+
+<script>
+    // BÀI 1
+    function ok() {
+        let browser = document.getElementById('name').value;
+        switch(browser) {
+            case 'Edge':
+                alert("You've got the Edge!");
+                break;
+            
+            case 'Chrome':
+            case 'Firefox':
+            case 'Safari':
+            case 'Opera':
+                alert('Okay we are support these browsers too')
+                break;
+            default:
+                alert('We hope that this page looks ok!')                
+        }
+    }
+
+    // BÀI 2
+    function check() {
+        let checkNum = parseInt(document.getElementById('number').value);
+        switch(checkNum) {
+            case 0:
+                alert(0);
+                break;
+            
+            case 1:
+                alert(1);
+                break;
+            
+            case 2:
+            case 3:
+                alert('2,3');
+                break;
+        }
+    }
+
+    // BÀI 3
+    function outPut() {
+        let a = parseInt(document.getElementById('num').value);
+
+        if(a > 0) {
+            alert('Là số dương');
+        } else if(a < 0) {
+            alert('Là số âm');
+        } else {
+            alert('Là số 0');
+        }
+    }
+</script>
+</html>
